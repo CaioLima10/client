@@ -6,8 +6,40 @@ body {
   font-family: "Space Grotesk", sans-serif;
 }
 
+::-webkit-scrollbar {
+  width: 8px;
+  height: 6px;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+  width: 8px;
+}
+
+::dark:-webkit-scrollbar-thumb {
+  background: #333333;
+  border-radius: 10px;
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  width: 8px;
+  border-radius: 10px;
+  background: #666;
+}
+
 .h-screen-header {
   height: calc(100vh - 76px);
+}
+
+.h-screen-header-posts {
+  height: calc(100vh - 106px);
 }
 
 .h-screen-main {
