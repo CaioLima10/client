@@ -1,113 +1,113 @@
+import Link from "next/link";
+import Header from "./components/header";
 import Image from "next/image";
+import ImgSun from "../assets/Sun.png";
+import ImgMoon from "../assets/Moon.png";
+import { MdArrowForwardIos, MdKeyboardArrowDown } from "react-icons/md";
+import About from "./components/about";
+import Languages from "./components/languages";
+import BannerInfo from "./components/banner-info";
+import Footer from "./components/footer";
+import BannerInfoSub from "./components/banner-info-sub";
+import Img from "../assets/capa.jpg";
+import ImgDia from "../assets/dia (2).png";
+import ImgNoite from "../assets/noite.png";
+import { Inter } from "next/font/google";
 
-export default function Home() {
+const font = Inter({
+  weight: ["100", "300", "500", "700"],
+  subsets: ["latin"],
+});
+
+export default function Page() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+    <div className={font.className}>
+      <Header />
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
+      <main
+        className="main flex flex-col bg-gradient-to-br w-full 
+                from-customGreen to-blue-500  dark:from-zinc-950 dark:to-zinc-950 relative"
+      >
         <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
+          src={Img}
+          alt=""
+          layout="fill"
+          objectFit="cover"
+          className="w-full hidden dark:flex"
         />
-      </div>
+        <div className="container px-10 py-16 flex items-center mx-auto z-10">
+          <section className="w-full flex flex-col items-center">
+            <div className="flex w-full items-center">
+              <span className="text-6xl font-bold flex mr-4">
+                Um Univers
+                <Image
+                  src={ImgSun}
+                  alt="SOL"
+                  className="flex dark:hidden w-16 right-32 duration-300 top-8"
+                  style={{ animation: "spin 8s linear infinite" }}
+                  width={100}
+                  height={22}
+                />
+                <Image
+                  src={ImgMoon}
+                  alt="Lua"
+                  className="hidden dark:flex w-14 right-[136px] top-10"
+                  style={{ animation: "spin 8s linear infinite" }}
+                  width={100}
+                  height={22}
+                />
+              </span>
+              <span className="dark:text-cyan-500 text-6xl font-bold">
+                de Vantagens
+              </span>
+            </div>
+            <div className=" flex items-center justify-between relative">
+              <div className="flex flex-col lg:flex-row mt-6">
+                <div className="w-full lg:w-1/2">
+                  <h2 className="text-3xl mt-6 font-normal text-zinc-950 dark:text-zinc-100/50">
+                    Venha ser um AstroWinner e aprender com o que tem de melhor
+                    no Mercado!
+                  </h2>
+                  <Link
+                    href={"/register"}
+                    className="flex items-center justify-center gap-6  lg:w-auto h-14 text-xl font-semibold 
+                          bg-zinc-100 dark:bg-black dark:text-zinc-100 ring-2 ring-zinc-100/75
+                          dark:ring-cyan-500 mt-4 lg:mt-10 rounded-tr-xl rounded-bl-xl shadow-2xl  z-50"
+                  >
+                    CADASTRE-SE
+                    <span>
+                      <MdArrowForwardIos size={20} />
+                    </span>
+                  </Link>
+                </div>
+                <div className="flex justify-center items-center w-full lg:w-1/2">
+                  <Image
+                    src={ImgDia}
+                    alt="cdcdc"
+                    className="flex dark:hidden duration-700 transition-all w-full h-full"
+                  />
+                  <Image
+                    src={ImgNoite}
+                    alt="cdcdc"
+                    width={600}
+                    height={480}
+                    className="hidden dark:flex duration-700 transition-all"
+                  />
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
 
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+        <div className="w-full flex items-center justify-center mt-20">
+          <MdKeyboardArrowDown className="animate-bounce" size={60} />
+        </div>
+      </main>
+      <Languages />
+      <BannerInfoSub />
+      <About />
+      <BannerInfo />
+      <Footer />
+    </div>
   );
 }
