@@ -20,7 +20,7 @@ export function ThemeSwitcher() {
   return (
     <div>
       <div
-        className="w-10 h-10 rounded-full flex items-center justify-center"
+        className="w-10 h-10 rounded-full flex items-center justify-center mr-4"
         style={{
           backgroundColor: theme === "light" ? "" : "",
         }}
