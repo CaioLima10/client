@@ -4,8 +4,8 @@ interface FontTextProps {
 
 export const TextWhatIDo = ({ className }: FontTextProps) => {
   return (
-    <div className="p-6 dark:shadow-black/40 shadow-zinc-400 dark:shadow-xl shadow-md bg-zinc-100 dark:bg-zinc-950">
-      <h1 className={`${className} text-3xl mb-4`}>Sobre mim</h1>
+    <div className="p-6 py-12 w-full h-3/4 mb-10 md:mb-0 dark:shadow-black/40 shadow-zinc-400 dark:shadow-xl shadow-md bg-zinc-100 dark:bg-zinc-950">
+      <h1 className={`${className} text-3xl mb-6`}>Sobre mim</h1>
       <p>
         Olá, meu nome é Caio Lima e sou um entusiasta da tecnologia. Tive a
         oportunidade de mergulhar no mundo da programação e aprender seus

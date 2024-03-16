@@ -4,8 +4,8 @@ interface FontTextProps {
 
 export const TextAbout = ({ className }: FontTextProps) => {
   return (
-    <div className="p-6 dark:shadow-black/40 shadow-zinc-400 dark:shadow-xl shadow-md bg-zinc-200 dark:bg-zinc-900">
-      <h1 className={`${className} text-3xl mb-4`}>O que eu faço</h1>
+    <div className="p-6 py-12 w-full h-3/4 dark:shadow-black/40 shadow-zinc-400 dark:shadow-xl shadow-md bg-zinc-200 dark:bg-zinc-900">
+      <h1 className={`${className} text-3xl mb-6`}>O que eu faço</h1>
       <p>
         Atualmente, estudo Análise e Desenvolvimento de Sistemas, mas possuo
         conhecimento em programação há algum tempo. Durante essa jornada, tive a
